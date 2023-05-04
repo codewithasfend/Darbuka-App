@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DarbukaApp.DarbukaAppPage"
+             Title="DarbukaAppPage"
+             BackgroundImageSource="arabtheme.png">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="TextColor"
+                    Value="Black" />
+            <Setter Property="FontAttributes"
+                    Value="Bold" />
+            <Setter Property="BackgroundColor"
+                    Value="Transparent" />
+            <Setter Property="BorderColor"
+                    Value="Transparent" />
+            <Setter Property="FontSize"
+                    Value="15" />
+            <Setter Property="CornerRadius"
+                    Value="30" />
+            <Setter Property="Padding"
+                    Value="10" />
+            <Setter Property="HeightRequest"
+                    Value="65" />
+            <Setter Property="WidthRequest"
+                    Value="65" />
+            <Setter Property="VerticalOptions"
+                    Value="Center" />
+
+        </Style>
+    </ContentPage.Resources>
+
+
+    <Grid Padding="0"
+          RowSpacing="0"
+          ColumnSpacing="0">
+        <ImageButton HeightRequest="350"
+                     WidthRequest="350"
+                     BackgroundColor="LightGray"
+                     CornerRadius="175"
+                     Source="darbukaborders.png"
+                     Aspect="Fill" 
+                     x:Name="ImgDarbuka"/>
+
+        <Grid Padding="10"
+              HeightRequest="240"
+              WidthRequest="240"
+              RowDefinitions="3.33*,3.33*,3.33*"
+              ColumnDefinitions="3.33*,3.33*,3.33*">
+            <Button Text="Roll"
+                    Grid.Row="0"
+                    Grid.Column="0" 
+                    Clicked="Button_Clicked"
+                    CommandParameter="rolltop"/>
+            <Button Text="Slap"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Clicked="Button_Clicked" 
+                    CommandParameter="slap"/>
+            <Button Text="Roll"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Clicked="Button_Clicked" 
+                    CommandParameter="rollmid"/>
+            <Button Text="Doum"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Clicked="Button_Clicked" 
+                    CommandParameter="doum"/>
+            <Button Text="Tek"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Clicked="Button_Clicked" 
+                    CommandParameter="tek"/>
+            <Button Text="Ka"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Clicked="Button_Clicked" 
+                    CommandParameter="kaleft"/>
+            <Button Text="Ka"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Clicked="Button_Clicked" 
+                    CommandParameter="karight"/>
+        </Grid>
+    </Grid>
+</ContentPage>
